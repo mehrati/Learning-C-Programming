@@ -1,1 +1,1 @@
-this example just for education porpuse 
+this example just for education purpose 
