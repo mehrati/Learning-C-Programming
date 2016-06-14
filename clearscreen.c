@@ -10,7 +10,7 @@ char *str;
 tgetent(buf, getenv("TERM"));
 str = tgetstr("cl", NULL);
 fputs(str, stdout);
-//system ("tput clear");
+//system ("clear");
 
 return 0;
 }
