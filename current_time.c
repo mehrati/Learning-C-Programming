@@ -4,16 +4,16 @@
 #include <unistd.h>
 int main(){
 
- time_t c_time;
+ time_t r_time;
 
  system ("clear");
 
 while(1)
 {
 
- time(&c_time);
+ time(&r_time);
 
- printf("%s\n",ctime(&c_time));
+ printf("%s\n",ctime(&r_time));
 
  sleep(1);
 

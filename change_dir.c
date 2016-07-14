@@ -4,12 +4,7 @@
 
 int main(int argc,char *argv[]){
 
-if(argc==2)
-
-  chdir(argv[1]);
-
-
-
+if(argc==2) chdir(argv[1]);
 
 return 0;
 }

@@ -4,21 +4,7 @@
 
 int main(){
 
-
-
-
 printf("%ld\n",__STDC_VERSION__);
-
-
-
-
-
-
-
-
-
-
-
 
 return EXIT_SUCCESS;
 }

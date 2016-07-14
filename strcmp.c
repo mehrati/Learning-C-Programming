@@ -5,7 +5,7 @@
 #include <string.h>
 
 char str1[30]="mahdi";
-char str2[30]="mahdiee";
+char str2[30]="ali";
 
 int main(){
 

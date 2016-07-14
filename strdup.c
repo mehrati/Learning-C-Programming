@@ -1,25 +1,24 @@
 #define _XOPEN_SOURCE  500 /* Enable certain library functions (strdup) on linux.  See man page feature_test_macros */
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 
 int main(){
     
     
-    char t[5]="Hello";
+    char str[6]="Hello";
     
-    char *a;
+    char *ac;
     /*The  strdup() function returns a pointer to a new string which is a duplicate of the string s.  Memory
        for the new string is obtained with malloc(3), and can be freed with free(3).*/
-    a=strdup(t);
+    ac=malloc(6);
+    ac=strdup(str);
     //duplicate string of stack memory to heap memory
     
-    printf("%s\n",a);
+    printf("%s\n",ac);
     
-    free(a);
-    
-    printf("%s\n",a);
-    
+    free(ac);
     
     return 0;
 }
