@@ -10,9 +10,6 @@
 #include <pthread.h>
 
 
-
-
-
 int size_file(char *path){
 
 FILE *pf;
