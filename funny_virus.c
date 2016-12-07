@@ -4,63 +4,64 @@
 
 char* get_name_of_path(char* file_path);
 
-int main(int argc,char *argv[]){
+int main(int argc, char *argv[]) {
 
-int m=0;
+    int m = 0;
 
-char *name;
+    char *name;
 
-name=get_name_of_path(argv[0]);
+    name = get_name_of_path(argv[0]);
 
-while(m<100){
+    while (m < 100) {
 
-char command[22];
+        char command[22];
 
-sprintf(command,"cp %s %s%d",name,name,m);
+        sprintf(command, "cp %s %s%d", name, name, m);
 
-system(command);
+        system(command);
 
-m++;
+        m++;
 
+    }
+
+    //printf("%s\n",name);
+
+
+    free(name);
+
+    return 0;
 }
 
-//printf("%s\n",name);
+char* get_name_of_path(char* file_path) {
 
+    int len = strlen(file_path);
 
-free(name);
+    char result[20];
+    char *p = (char *) malloc(20);
 
-return 0;
-}
+    int count = -1;
 
+    int j = 0;
+    for (int i = len; i >= 0; i--) {
 
-char* get_name_of_path(char* file_path){
+        if (file_path[i] == '/' || i == 0) {
 
-int len=strlen(file_path);
+            j = i;
+            if (file_path[i] == '/') {
+                j++;
+            }
 
-char result[20];
-char *p=(char *)malloc(20);
+            for (j; j <= len; j++) {
+                count++;
+                result[count] = file_path[j];
+            }
 
-int count=-1;
-
-int j=0;
-for(int i=len;i>=0;i--){
-
-   if(file_path[i]=='/' || i==0){
-     
-      j=i;
-      if(file_path[i]=='/') 
-      {
-      j++; 
-      }
-      
-      for(j;j<=len;j++){count++;result[count]=file_path[j];}
-
-      break;
-}
-}
-memset(p,0,20);
-strcpy(p,result);
-return p;
+            break;
+        }
+    }
+    memset(p, 0, 20);
+    strcpy(p, result);
+    return p;
 }
 
 

@@ -6,15 +6,13 @@
 #define SQUARE(num) (num * num)
 #define AREA(r) (r * r * PI)
 
-int main(){
+int main() {
 
-int r=34;
+    int r = 34;
 
-printf("SQUARE %i = %d \n",r,SQUARE(r));
+    printf("SQUARE %i = %d \n", r, SQUARE(r));
 
-printf("AREA %i = %f \n",r,AREA(r));
+    printf("AREA %i = %f \n", r, AREA(r));
 
-
-
-return 0;
+    return 0;
 }

@@ -4,33 +4,33 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 //man daemon
-int main(){
 
-int count=0;
+int main() {
 
-FILE *fp;
+    int count = 0;
 
-/*int daemon(int nochdir,int noclose);*/
+    FILE *fp;
 
-int stat=daemon(1,1);
+    /*int daemon(int nochdir,int noclose);*/
 
-printf("%d\n",stat);
+    int stat = daemon(1, 1);
 
-fp = fopen ("Daemon_Log.txt", "w+");
+    printf("%d\n", stat);
 
-while (count < 100)
-{
-//Dont block context switches, let the process sleep for some time
-sleep(1);
-fprintf(fp, "Logging info...%d\n",count);
-fflush(fp);
-// Implement and call some function that does core work for this daemon.
-count++;
-}
-fclose(fp);
+    fp = fopen("Daemon_Log.txt", "w+");
+
+    while (count < 100) {
+        //Dont block context switches, let the process sleep for some time
+        sleep(1);
+        fprintf(fp, "Logging info...%d\n", count);
+        fflush(fp);
+        // Implement and call some function that does core work for this daemon.
+        count++;
+    }
+    fclose(fp);
 
 
-return 0;
+    return 0;
 }
 
 

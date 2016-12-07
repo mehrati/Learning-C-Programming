@@ -3,32 +3,33 @@
 #include <stdlib.h>
 #include <termcap.h>
 #include <unistd.h>
-int main(){
 
-char buf[1024];
-char *str;
-while(1){
-tgetent(buf, getenv("TERM"));
-str = tgetstr("cl", NULL);
-fputs(str, stdout);
+int main() {
 
-printf("/");
-sleep(0.9);
-tgetent(buf, getenv("TERM"));
-str = tgetstr("cl", NULL);
-fputs(str, stdout);
+    char buf[1024];
+    char *str;
+    while (1) {
+        tgetent(buf, getenv("TERM"));
+        str = tgetstr("cl", NULL);
+        fputs(str, stdout);
 
-printf("-");
-sleep(0.9);
-tgetent(buf, getenv("TERM"));
-str = tgetstr("cl", NULL);
-fputs(str, stdout);
+        printf("/");
+        sleep(0.9);
+        tgetent(buf, getenv("TERM"));
+        str = tgetstr("cl", NULL);
+        fputs(str, stdout);
 
-printf("\\");
-sleep(0.9);
-}
+        printf("-");
+        sleep(0.9);
+        tgetent(buf, getenv("TERM"));
+        str = tgetstr("cl", NULL);
+        fputs(str, stdout);
+
+        printf("\\");
+        sleep(0.9);
+    }
 
 
 
-return 0;
+    return 0;
 }

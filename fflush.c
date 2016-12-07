@@ -1,31 +1,25 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
-int main()
-{
 
+int main() {
 
-  char str[50];
+    char str[50];
+    bzero(str, 50);
+    FILE *pf;
 
-  bzero(str,50);
+    pf = fopen("log.md", "a+");
 
-  FILE *pf;
-  
-  pf=fopen("log.md","a+");
+    while (1) {
 
-while(1){
+        fgets(str, 50, stdin);
+        fwrite(str, strlen(str), 1, pf);
+        fflush(pf);
+        bzero(str, 50);
 
-  fgets(str,50,stdin);
+    }
 
-  fwrite(str,strlen(str),1,pf);
+    fclose(pf);
 
-  fflush(pf);
-
-  bzero(str,50);
-
-}
-
-fclose(pf);
-
-   return(0);
+    return (0);
 }

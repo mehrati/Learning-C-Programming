@@ -1,36 +1,36 @@
 #include<stdio.h>
 
+int main() {
 
-int main(){
+    long int decimal, remainder, quotient;
 
-    long int decimalNumber,remainder,quotient;
-
-    int binaryNumber[100],i=1,j;
-
-
-    printf("Enter any decimal number: ");
-
-    scanf("%ld",&decimalNumber);
+    int binary[100], i = 0;
 
 
-    quotient = decimalNumber;
+    printf("Enter any decimal number :");
+
+    scanf("%ld", &decimal);
 
 
-    while(quotient!=0){
+    quotient = decimal;
 
-         binaryNumber[i++]= quotient % 2;
 
-         quotient = quotient / 2;
+    while (quotient != 0) {
+
+        binary[i++] = quotient % 2;
+
+        quotient = quotient / 2;
 
     }
 
 
-    printf("Equivalent binary value of decimal number %ld: ",decimalNumber);
+    printf("dec %ld => bin ", decimal);
 
-    for(j = i -1 ;j> 0;j--){
+    for (int j = i - 1; j >= 0; j--) {
 
-         printf("%d",binaryNumber[j]);}
-         printf("\n");
+        printf("%d", binary[j]);
+    }
+    printf("\n");
 
 
     return 0;

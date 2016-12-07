@@ -2,18 +2,19 @@
 #include <string.h>
 #include <unistd.h>
 #include <errno.h>
-int main(int argc,char *argv[]){
 
-   char cwd[100];
+int main(int argc, char *argv[]) {
 
-   if (getcwd(cwd, sizeof(cwd)) != NULL){
+    char cwd[100];
 
-       printf("Current working dir: %s\n", cwd);
-     }
-   else{
+    if (getcwd(cwd, sizeof (char) * 100) != NULL) {
 
-       perror("getcwd() error");
-     }
+        printf("Current working directory: %s\n", cwd);
 
-return 0;
+    } else {
+
+        perror("Error!");
+    }
+
+    return 0;
 }

@@ -2,12 +2,8 @@
 #include <stdlib.h>
 #include <assert.h>
 
-int main(){
-int num=100;
-
-assert( num <= 50 ); //if condition is not true return massage
-
-
-return 0;
+int main() {
+	int value = 100;
+	assert(value <= 50); //if condition is false return massage
+	return 0;
 }
-

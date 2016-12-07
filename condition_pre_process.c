@@ -4,24 +4,24 @@
 
 #define NUM 3
 
-int main(){
+int main() {
 
 
 #if NUM == 1
 
-printf("eq 1\n");
+    printf("NUM equal 1\n");
 
 #elif NUM == 2
 
-printf("eq 2\n");
+    printf("NUM equal 2\n");
 
 #elif NUM == 3
 
-printf("eq 3\n");
+    printf("NUM equal 3\n");
 
 #else
 
-printf("not eq \n");
+    printf("some \n");
 
 #endif
 
@@ -29,10 +29,10 @@ printf("not eq \n");
 
 #ifndef NUM 
 
-printf("not exist NUM\n");  
+    printf("not exist NUM\n");
 
 #endif
 
 
-return 0;
+    return 0;
 }

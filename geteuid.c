@@ -1,22 +1,16 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>  
+#include <stdlib.h>  /* For exit() function */
+int main() {
 
-int main(){
+    /* uid root user is 0 */
 
-        //uid root is 0
+    if (geteuid() != 0) {
 
-   if (geteuid() != 0)
-      {
+        printf("Must run as root !!!\n");
 
-      printf("Must run as root !!!\n");
+        exit(-1);
+    }
 
-      exit(-1);
-      }
-
-
-
-
-
-return 0;
+    return 0;
 }

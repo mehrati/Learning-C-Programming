@@ -1,14 +1,14 @@
 #include<stdio.h>
-int main(){
 
- unsigned int decimalNumber;
- 
+int main() {
 
-  printf("Enter any decimal number: ");
+    unsigned int decimal;
 
-  scanf("%d",&decimalNumber);
+    printf("Enter any decimal number: ");
 
-  printf("Equivalent hexadecimal number is: %x\n",decimalNumber);
+    scanf("%d", &decimal);
 
-  return 0;
+    printf("Equivalent hexadecimal number is: %x\n", decimal);
+
+    return 0;
 }

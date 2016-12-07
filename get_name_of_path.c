@@ -1,32 +1,38 @@
 #include <stdio.h>
 #include <string.h>
-int main(){
 
-char file_name[50]="home/MAHDI.txt";
+int main() {
 
-int len=strlen(file_name);
+    char file_name[50] = "home/MAHDI.txt";
 
-char result[20];
+    int len = strlen(file_name);
 
-int count=-1;
+    char result[20];
 
-for(int i=len;i>=0;i--){
+    int count = -1;
 
-   if(file_name[i]=='/' || i==0){
+    for (int i = len; i >= 0; i--) {
 
-      int j=i;
+        if (file_name[i] == '/' || i == 0) {
 
-      if(file_name[i]=='/'){ j++; }
+            int j = i;
 
-      for(j;j<=len;j++){count++;result[count]=file_name[j];}
+            if (file_name[i] == '/') {
+                j++;
+            }
 
-      result[j+1]='\0';
+            for (j; j <= len; j++) {
+                count++;
+                result[count] = file_name[j];
+            }
 
-      break;
-}
-}
+            result[j + 1] = '\0';
 
-printf("%s\n",result);
+            break;
+        }
+    }
 
-return 0;
+    printf("%s\n", result);
+
+    return 0;
 }
