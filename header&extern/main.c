@@ -1,15 +1,11 @@
 #include "header.h"
 
-int main(){
+int main() {
 
-extern int num;
+    extern int num;
 
-printf("this is main function \n");
+    func();
+    printf("extern num = %d\n", num);
 
-func();
-
-printf("extern num = %d\n",num);
-
-
-return 0;
+    return 0;
 }

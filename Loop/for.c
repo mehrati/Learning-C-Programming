@@ -1,16 +1,13 @@
-
 #include <stdio.h>
 #include <stdlib.h>
-#include <termcap.h>
 
 int main() {
 
-    int count = 0;
+    int i = 0, size = 100;
 
-lable:
-    printf("%d\n", count);
-    count++;
-    if (count <= 100) goto lable;
+    for (i = 0; i <= size; i++) {
+        printf("%d \n", i);
+    }
 
     return 0;
 }

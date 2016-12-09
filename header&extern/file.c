@@ -1,10 +1,10 @@
 #include "header.h"
 
-int num=2000;
+int num = 2000;
 
 void func() {
 
-printf("this is func function \n");
+    printf("this is func function \n");
 
 }
 

@@ -2,24 +2,24 @@
 #include <stdlib.h>
 #include <time.h>
 #include <unistd.h>
-int main(){
 
- time_t r_time;
+int main() {
 
- system ("clear");
+    time_t r_time;
 
-while(1)
-{
+    system("clear");
 
- time(&r_time);
+    while (1) {
 
- printf("%s\n",ctime(&r_time));
+        time(&r_time);
 
- sleep(1);
+        printf("%s\n", ctime(&r_time));
 
- system ("clear");
+        sleep(1);
 
-}
+        system("clear");
 
-return 0;
+    }
+
+    return 0;
 }

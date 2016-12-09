@@ -1,1 +1,1 @@
-this example just for education purpose 
+Learning C programming language
